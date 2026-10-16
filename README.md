@@ -28,13 +28,7 @@ This is a beginer-level workshop and does not require any prior programming know
 
 To attend this class you can either set up your account in RStudio Online or run the course material on your laptop if you have R Studio installed already:
 
-- Set up account for Rstudio Online: click on the link below and log in via a Google account to set up in RStudio Online.
-
-<div style="width: 60%; height: 60%">
-  
- [![RStudioCloud](https://github.com/DCS-training/OCR/blob/main/PositLogo.png)](https://posit.cloud)
-  
-</div>
+- Set up account for Rstudio Online: click on the link below and log in via a Google account to set up in RStudio Online. https://docs.posit.co/ide/user/download.html
 
 - Once you have signed in, start a new project from the git Repository (upper right corner), and copy paste the link to this github repo to load the course material.
 
