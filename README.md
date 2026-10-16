@@ -1,6 +1,6 @@
 # From Images to Text: Working with OCR
 
-Welcome to the Readme file for the CDCS Workshop '**From Images to Text: Working with OCR**'. Below you can find all the details that you will need to get ready and attend this class.
+Welcome to the EFI data-led training series '**From Images to Text: Working with OCR**'. You can find all the details that you will need to get ready and attend this course.
 
 ## Overview
 
@@ -22,12 +22,7 @@ We will practice implementing OCR using the following tools:
 
 This is a beginer-level workshop and does not require any prior programming knowledge or background of text extraction processes.
 
-## **What will you need**
-
-- A Laptop
-- A WiFi Connection
-- If you're new to R and Python, don't worry we have built the files and material that will allow you to visualise and play with the code for this class.
-
+## Getting Ready for Joining the Session
 
 ### Working with R
 
@@ -41,19 +36,33 @@ To attend this class you can either set up your account in RStudio Online or run
   
 </div>
 
-- Once you have signed in, start a new project from the git Repository (upper right corner), and copy paste the following link to load the project:
- https://github.com/DCS-training/OCR-From-Images-To-Text-2025
- 
-- [Download course material for R](https://github.com/DCS-training/OCR-From-Images-To-Text-2025/tree/main/Working%20with%20R) 
+- Once you have signed in, start a new project from the git Repository (upper right corner), and copy paste the link to this github repo to load the course material.
 
-### **Working with Python**
+### 1. Option A: Use Noteable (recommended option - installation free with EASE Login)
 
-To attend the class, please log in via a google account. If you’d like to download and edit the files or code, please log into Google Colab and select the 'Copy to Drive' option to download and edit.
+- Open the following link in a new tab https://noteable.edina.ac.uk/login
+- Log in with your EASE credential
+- Select _Standard Python 3_ and press start
+- Select New > Python 3 Notebook
+- Check that it works by trying some simple calculations like "3 + 2" in the first cell and run it.
 
-- Log in to Google Colab: 
-[![Google Colab](https://camo.githubusercontent.com/96889048f8a9014fdeba2a891f97150c6aac6e723f5190236b10215a97ed41f3/68747470733a2f2f636f6c61622e72657365617263682e676f6f676c652e636f6d2f6173736574732f636f6c61622d62616467652e737667)](https://colab.research.google.com/github/DCS-training/OCR-From-Images-To-Text-2025/blob/main/Working%20with%20Python/ImageToTextOCR.ipynb)
+### 2. Option B: Use Google Colab (installation free option - recommended for participants who do not have a UoE EASE login)
 
-- [Download course material for Python ](https://github.com/DCS-training/OCR-From-Images-To-Text-2025/tree/main/Working%20with%20Python)
+- Open Google Colab: https://colab.research.google.com/
+- If you are not already logged you will be prompted to log-in via gmail
+- Select New Notebook
+- Check that it works by trying some simple calculation like "3 + 2" in the first cell and run it.
+
+### 3. Option C: Download and install Python 3 locally (not recommended for beginners)
+
+There are different ways of installing and running Python locally on your personal computer. These instructions use Anaconda, a popular Python distribution for data science and AI uses of Python.
+
+- Go to https://www.anaconda.com/download
+- Sign up and download the version for your operating system (Windows, Mac, or Linux)
+- Follow the installations steps using the default options
+- Once Anaconda is installed check:
+  - In Windows: Use the search bar to look for "Anaconda Prompt". Open it and access Python by writing "python". The Python command line will prompt. Check that it works by trying some simple calculation like "3 + 2".
+  - In Mac: Open the terminal and access Python by writing "python". The Python command line will prompt. Check that it works by trying some simple calculation like "3 + 2".
 
 
 ## **License and Authors**
