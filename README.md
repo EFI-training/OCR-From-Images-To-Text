@@ -58,6 +58,71 @@ There are different ways of installing and running Python locally on your person
   - In Windows: Use the search bar to look for "Anaconda Prompt". Open it and access Python by writing "python". The Python command line will prompt. Check that it works by trying some simple calculation like "3 + 2".
   - In Mac: Open the terminal and access Python by writing "python". The Python command line will prompt. Check that it works by trying some simple calculation like "3 + 2".
 
+## Batch OCR with the OpenAI API
+
+The `openai_ocr.py` script transcribes images in a folder and writes one UTF-8
+`.txt` file per image. It processes images sequentially, which is a simple way
+to keep a large run manageable. Existing output files are skipped by default,
+so you can rerun after an interruption; use `--overwrite` to process them again.
+
+### Set up
+
+1. Create an API key in your OpenAI account.
+2. Install Python dependencies (a virtual environment is recommended):
+
+   ```bash
+   python -m venv .venv
+   source .venv/bin/activate
+   python -m pip install -r requirements-openai-ocr.txt
+   ```
+
+3. Set the key as an environment variable. Do not put it in the script or
+   commit it to the repository.
+
+   macOS/Linux:
+
+   ```bash
+   export OPENAI_API_KEY="your-api-key"
+   ```
+
+   Windows PowerShell:
+
+   ```powershell
+   $env:OPENAI_API_KEY = "your-api-key"
+   ```
+
+### Run a batch
+
+Put images in a folder, then run:
+
+```bash
+python openai_ocr.py --input-dir "./images" --output-dir "./ocr_output"
+```
+
+The script prints each extracted transcription and saves it to a text file
+under `ocr_output`, using the corresponding image name. For example,
+`images/page1.jpg` produces `ocr_output/page1.txt`. Use `--recursive` to
+include subfolders, `--show-images` to open each image in your system image
+viewer before submission, and `--overwrite` to replace existing results.
+The model defaults to `gpt-4.1-mini`; use `--model MODEL_NAME` or set
+`OPENAI_OCR_MODEL` to choose another vision-capable model.
+
+Each image is sent to the OpenAI API, which may incur usage charges. Confirm
+that you are permitted to upload the images before processing sensitive,
+personal, or copyrighted material. The script continues after individual
+image errors, reports them, and exits with a non-zero status if any image
+failed.
+
+### Use an ELM API key in the notebook
+
+For `openai_ocr_batch.ipynb`, copy `.env.example` to `.env` in the project
+root, then replace both placeholder values with the private ELM API key and
+the OpenAI-compatible base URL `https://elm.edina.ac.uk/api/v1`. The `.env`
+file is ignored by Git; do not share or commit it. The notebook loads the values with
+`python-dotenv` and passes both to the OpenAI client. Its current OCR request
+uses the Chat Completions API, so confirm that the ELM endpoint supports it
+before running the batch.
+
 
 ## **License and Authors**
 

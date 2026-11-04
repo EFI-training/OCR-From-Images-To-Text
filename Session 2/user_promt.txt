@@ -1,0 +1,8 @@
+Transcribe all readable text in the images as accurately as possible. 
+1. Preserve the original reading order in the transcription.
+2. Keep separate text blocks, headings and paragraphs distinct where their positions make this clear.
+3. If your confidence in recognising a word or character is below 80%, add `[*]` immediately after the uncertain word or character.
+2. Do not guess or silently substitute uncertain text.
+3. If a word contains multiple uncertain characters, place `[*]` immediately after the affected word.
+4. If the text is completely illegible, use `[ illegible]`.
+5. Return only the transcription in plain text. Do not provide a summary, translation or explanation. Prioritise accuracy to the source over readability.
